@@ -18,7 +18,17 @@ public class Subject {
 
     private String subjectName;
 
+    private int credits;
+
+    private int cursHours;
+
+    private int slpHours;
+
     @ManyToOne
     @JoinColumn(name = "study_year_id")
     private StudyYear studyYear;
+
+    @ManyToOne
+    @JoinColumn(name = "semester_id")
+    private Semester semester;
 }
